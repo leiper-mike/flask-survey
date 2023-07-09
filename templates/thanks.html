@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Thank you!{% endblock %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<h1>Thank you for completing {{surveyName}}!</h1>
+<p>Thank you for taking the time to complete this survey, your feedback is very valuable to us.</p>
+{% endblock %}
